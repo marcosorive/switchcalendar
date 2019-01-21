@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    {% load humanize %}
+
+		<title>Nintendo switch calendar</title>
+		<link rel="shortcut icon" type="image/png" href="https://www.pythonanywhere.com/user/switchcalendar/files/home/switchcalendar/switchcalendar/games/templates/games/%7B%%20static%20'games/favicon.ico'%%7D">
+		<meta charset="UTF-8">
+		{% load static %}
+		{% load humanize %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		 <link rel="stylesheet" href="{% static 'games/css/bootstrap.min.css' %}">
+   		<link rel="stylesheet" href="{% static 'games/css/mdb.min.css' %}">
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" >
+        <link rel="stylesheet" type="text/css" href="{% static 'games/css/calendarstyle.css' %}">
+        
+</head>
+<body>
+{% load static %}
+<nav class="navbar navbar-expand-md head-banner">
+    <a class="navbar-brand" href="/">Nintendo switch calendar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#calendar-nav-bar" aria-controls="calendar-nav-bar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon white-text">☰</span>
+    </button>
+    <div class="collapse navbar-collapse" id="calendar-nav-bar">
+        <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+           	{% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/myCalendar">My calendar
+                    </a>
+                </li>
+            	<li class="nav-item">
+                	<a class="nav-link" href="/accounts/profile">Profile</a>
+            	</li>
+	           	<li class="nav-item">
+                	<a class="nav-link" href="/accounts/logout">Log out</a>
+            	</li>
+	        {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/log_in">Log in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/signup">Sign up</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+	{% block content %}
+	{% endblock %}
+
+</body>
+
+<script type="text/javascript" src="{% static 'games/js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'games/js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'games/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'games/js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'games/js/calendar.js' %}"></script>
+
+
+
+
+</html>

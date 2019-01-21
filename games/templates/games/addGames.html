@@ -1,0 +1,58 @@
+{% extends 'games/base.html' %}
+{% block content %}
+{% load humanize %}
+<div class="center-left">
+	<div class="month">
+			<h3 class="container-fluid text-center month-header">Search games to add</h3>
+			<div class="container-fluid grey-background">
+				<div class="mt-3">
+				<input type="text" id="js-search-query" placeholder="Game name">
+				<button class="btn nintendo-red-background" id="js-search-btn" onclick="search()">Search</button>
+				</div>
+				<ul class="mt-3 non-bullet-list" id="js-games-to-add">
+				</ul>
+			</div>  
+	</div> 		
+</div>
+
+{% if user.is_staff %}
+<div class="center-left">
+	<div class="month">
+			<h3 class="container-fluid text-center month-header">Add games you can't find</h3>
+			<div class="container-fluid grey-background">
+				<div class="mt-3">
+				<form method="POST" action="addNewGame">
+					{% csrf_token %}
+					<label>Name: </label><input type="text" name="game_name" required><br>
+					<label>Type: </label>
+					<select name="game_type" required>
+						<option disabled selected></option>
+						<option value="0">First Party</option>
+						<option value="1">Third Party</option>
+						<option value="2">Indie</option>
+						<option value="3">Other</option>
+					</select><br>
+					<label>Date --- </label>
+					TBA: <input type="radio" name="radio_date" value="TBA" onclick="radioSelect('tba')"> 
+					Year: <input type="radio" name="radio_date" value="year" onclick="radioSelect('year')"> 
+					Release: <input type="radio" name="radio_date" value="release" onclick="radioSelect('release')">
+					<input type="number" name="game_year" id="inputYear" class="display-none" placeholder="Year">
+					<label id="labelRelease" class="display-none">Release Date:</label><input type="date" name="game_date" id="inputRelease" class="display-none">
+					<br><input type="submit" value="Add game" class="my-3">
+				</form>
+			</div>  
+	</div> 		
+</div>
+{% endif %}
+{% if status == "success" %}
+<div class="alert alert-success mt-3 mx-auto alert-new-game text-center" role="alert">
+  Game added successfully!
+</div>
+
+{% elif status == "failure" %}
+<div class="alert alert-danger mt-3 mx-auto alert-new-game text-center" role="alert">
+  An error ocurred while adding your game. Try again.
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,167 @@
+* {
+    font-family:  'Roboto' !important;
+}
+
+div {
+    overflow: auto;
+}
+
+.plus-button{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.navbar, .navbar-brand{
+    font-size: 1.2em !important;
+    font-weight: 400;
+}
+
+.gamelist {
+    min-height: 10em;
+    max-height: 10em;
+    z-index: 10;
+    background-color: #ebebeb !important;
+    text-align:left;
+}
+
+.grey-background{
+    text-align: center;
+    z-index: 10;
+    background-color: #ebebeb !important;
+}
+
+.month-container {
+    padding-bottom: 2em;
+
+}
+
+.nintendo-red-background{
+    background-color: #e60012 !important;
+}
+
+
+.month-header {
+    background-color: #e60012 !important;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.month {
+    box-shadow: 0 5px 10px -3px #d1d1d1;
+    border-radius: 10px;
+}
+
+
+#year {
+    font-size: 200%;
+    background-color: transparent !important;
+}
+
+.head-banner{
+    background-color: #e60012;
+    color: white !important
+}
+
+.aboutp a:link,.aboutp a:visited,.aboutp a:hover,.aboutp a:active, .bluelink:link,.bluelink:visited{
+    color: blue;
+}
+
+a:link,a:visited,a:hover,a:active {
+    color: white;
+}
+
+.center-left{
+    padding-top: 5%;
+    width: 90%;
+    margin: auto;
+}
+
+.aboutp{
+    font-size: 1.4em;
+}
+.category-selector{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.category-item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.category-container{
+    margin: 0 auto;
+    max-width: 90%;
+    padding-bottom: 2em;
+    text-align: center;
+}
+.categories{
+    float: left;
+}
+.switch-exclusive{
+    color:#e60012;
+
+}
+.non-bullet-list{
+    list-style-type: none;
+}
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+    margin:auto;
+}
+
+.float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+    margin-top:22px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .about-container{
+        width: 50%;
+    }
+
+    .center-left{
+        width: 50%;
+    }
+
+    .login-container{
+        width: 30%;
+        margin: auto;
+    }
+
+    .alert-new-game{
+        width: 50%
+    }
+
+    .category-container{
+    margin: 0 auto;
+    max-width: 40%;
+    padding-bottom: 2em;
+    text-align:center;
+    }
+    .category-selector{
+    margin: 0 auto;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+}

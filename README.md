@@ -1,2 +1,4 @@
-# switchcalendar
-Webapp to keep track of the new releases for Nintendo switch
+# Switch Calendar
+
+Switchcalendar is a webapp to keep track of the game releases for Nintendo Switch.
+You can try it in http://switchcalendar.com

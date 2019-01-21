@@ -1,0 +1,70 @@
+{% extends 'games/base.html' %}
+{% block content %}
+{% load humanize %}
+{% load widget_tweaks %}
+<div class="login-container mt-5">
+	<div class="month">
+		<h3 class="container-fluid text-center month-header">Sign up</h3>
+		<div class="container-fluid grey-background">
+			<div class="mt-4">
+				<form method="post" novalidate>
+					{% csrf_token %}
+
+					{% for hidden_field in form.hidden_fields %}
+					{{ hidden_field }}
+					{% endfor %}
+
+					{% if form.non_field_errors %}
+					<div class="alert alert-danger" role="alert">
+						{% for error in form.non_field_errors %}
+						{{ error }}
+						{% endfor %}
+					</div>
+					{% endif %}
+
+					{% for field in form.visible_fields %}
+					<div class="form-group">
+						{{ field.label_tag }}
+
+						{% if form.is_bound %}
+						{% if field.errors %}
+						{% render_field field class="form-control is-invalid" %}
+						{% for error in field.errors %}
+						<div class="invalid-feedback">
+							{{ error }}
+						</div>
+						{% endfor %}
+						{% else %}
+						{% render_field field class="form-control is-valid" %}
+						{% endif %}
+						{% else %}
+						{% render_field field class="form-control" %}
+						{% endif %}
+								<!--
+								{% if field.help_text %}
+								<small class="form-text text-muted">{{ field.help_text }}</small>
+								{% endif %}
+							-->
+						</div>
+						{% endfor %}
+
+						<button type="submit" class="btn nintendo-red-background mb-3">Sign up</button>
+					</form>
+
+							<!--
+				<form method="post" >
+					{% csrf_token %}
+					<div class="my-3">Username: {{ form.username }}<br></div>
+					<div class="my-3">First name: {{form.first_name}} (Optional)<br></div>
+					<div class="my-3">Last name: {{form.last_name}}  (Optional)<br></div>
+					<div class="my-3">Email: {{form.email}}<br></div>
+					<div class="my-3">Password: {{form.password1}}<br></div>
+					<div class="my-3">Confirm password: {{form.password2}}<br></div>
+				<button class="btn nintendo-red-background mb-3" type="submit">Sign up</button>
+				</form>
+				-->
+			</div>	
+		</div>  
+	</div> 		
+</div> 
+{% endblock %}

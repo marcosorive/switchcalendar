@@ -1,0 +1,53 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends 'games/base.html' %}
+{% block content %}
+{% load humanize %}
+{% if games %}
+	<div class="text-center mx-2">
+		<div class="category-selector w3-center">
+			{% for n, c in categories%}
+				<span class="category-item"><input name="{{c}}" checked="checked" 
+					onclick="hideShowDiv({{n}})" type="checkbox"> {{c}}</span>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="container-fluid">
+	{% for n,c in categories %}
+		<div class="category-container" id="{{n}}">
+			<div class="month">
+				<h3 class="month-header">{{c}}	</h3>
+				<div class="gamelist">
+					<ul class="mt-2">
+					{% for g in games %}
+						{% if g.category == n%}
+							{% if g.switch_exclusive %}
+						 		<li><strong>{{ g.release_date|date:"d"|ordinal }}</strong> - <span class="switch-exclusive">{{g.name}}</span></li>
+						 	{% else %}
+							 	<li><strong>{{ g.release_date|date:"d"|ordinal }}</strong> - {{g.name}}</li>
+							 {% endif %}
+						{% endif %}
+					{% endfor%}
+					</ul>
+				</div>
+			</div>
+		</div>	
+	{% endfor%}
+	</div>		
+{% else %}
+	<h3 class="m-5 text-center">Looks that there are no games for this month.
+		 <a class="bluelink" href="/">Go back</a> and check other month!</h3>
+{% endif %}
+
+<script type="text/javascript">
+	function hideShowDiv(divID) {
+		d=document.getElementById(divID)
+		if (d.style.display === "none") {
+        	d.style.display = "block";
+    	} 
+    	else{
+        	d.style.display = "none";
+    	}
+	}
+
+</script>
+{% endblock %}</body></html>

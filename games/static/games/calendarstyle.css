@@ -1,0 +1,108 @@
+* {
+    font-family:  'Roboto' !important;
+}
+
+div {
+    overflow: auto;
+}
+
+.gamelist {
+    min-height: 10em;
+    max-height: 10em;
+    z-index: 10;
+    background-color: #ebebeb !important;
+    text-align:left;
+}
+
+.month-container {
+    padding-bottom: 2em;
+
+}
+
+.red-background{
+    background-color: #e60012 !important;
+}
+
+.month-header {
+    background-color: #e60012 !important;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 2em;
+
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.month {
+    box-shadow: 0 5px 10px -3px #d1d1d1;
+    border-radius: 10px;
+}
+
+ul {
+    padding-left: 10%;
+}
+
+#year {
+    font-size: 200%;
+    background-color: transparent !important;
+}
+
+.head-banner{
+    background-color: #ebebeb;
+    color: black;
+}
+
+.center-left{
+    padding-top: 5%;
+    width: 90%;
+    margin: auto;
+}
+
+.aboutp{
+    font-size: 1.4em;
+}
+.category-selector{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.category-item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.category-container{
+    margin: 0 auto;
+    max-width: 90%;
+    padding-bottom: 2em;
+    text-align: center;
+}
+.categories{
+    float: left;
+}
+.switch-exclusive{
+    color:#e60012;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .center-left{
+        padding-top: 5%;
+        width: 50%;
+        margin: auto;
+    }
+
+    .category-container{
+    margin: 0 auto;
+    max-width: 40%;
+    padding-bottom: 2em;
+    text-align:center;
+    }
+    .category-selector{
+    margin: 0 auto;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+}

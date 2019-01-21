@@ -1,0 +1,112 @@
+body{
+	background-color: #F6F6F6;
+}
+
+
+.light-blue{
+	background-color: #689DF6 !important;
+}
+
+.light-orange{
+	background-color: #FFA05C;
+}
+
+.btn{
+	background-color: #7283a7 !important
+}
+
+.topbar{
+	text-align: right;
+	margin: 16px;
+}
+
+.index-card{
+	max-width: 490px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+
+.center-content{
+	max-width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.title-center, .center-text{
+	text-align: center;
+}
+
+
+.margin-padding-16{
+	padding: 16px;
+	margin: 16px;
+}
+.results-referencia-panel{
+	margin: 0 auto;
+	max-width: 75%;
+	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+}
+
+.search-panel{
+	margin: 0 auto;
+	max-width: 60%;
+	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.search-table{
+	margin: auto;
+}
+
+.blue-panel{
+	background-color: white;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+.red-panel{
+	margin: 16px;
+	padding:16px;
+	background-color: #f44336;
+	color:white;
+  	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.modify-link{
+	max-width: 90%;
+	margin: 0 auto;
+	text-align: right;
+}
+
+
+.pagination{
+	max-width: 50%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.prefijo{
+	font-weight: bold;
+	text-decoration-line: underline;
+}
+
+h1,h2{
+	margin: 0;
+}
+
+		
+td label{
+	margin-right: 25px;
+}
+*{
+	font-family: Roboto !important;
+}
+
+
+

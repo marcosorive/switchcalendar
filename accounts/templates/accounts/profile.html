@@ -1,0 +1,16 @@
+{% extends 'games/base.html' %}
+{% block content %}
+{% load humanize %}
+<div class="login-container mt-5">
+	<div class="month">
+		<h3 class="container-fluid text-center month-header">Profile</h3>
+		<div class="container-fluid text-center grey-background">
+			<div class="m-4">
+  				This is your profile.<br>
+  				Username: {{ user.username }}<br>
+  				email: {{user.email}}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
